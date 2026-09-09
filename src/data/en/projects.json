@@ -5,7 +5,7 @@
     "images": [],
     "tech": ["React Native", "JavaScript", "REST APIs"],
     "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/MyBill-Proyecto2",
     "category": "Mobile Development"
   },
   {
@@ -14,7 +14,7 @@
     "images": [],
     "tech": ["React", "Node.js", "Python", "Machine Learning", "Docker"],
     "platforms": ["web"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/ProyectoTerraSmart",
     "category": "IoT & Web"
   },
   {
@@ -23,7 +23,7 @@
     "images": [],
     "tech": ["Java", "Spring Boot", "PostgreSQL", "REST APIs"],
     "platforms": ["web", "api"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/MyBill-Proyecto2/MyBill-Risk-matrix",
     "category": "Backend Development"
   },
   {
@@ -32,7 +32,25 @@
     "images": [],
     "tech": ["Node.js", "Docker", "Cybersecurity", "REST APIs"],
     "platforms": ["api", "linux"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/TerraSmartESP32",
     "category": "IoT & Cybersecurity"
+  },
+  {
+    "title": "App Heat Maps",
+    "description": "A web application that visualizes heat maps of user interactions, providing insights into user behavior and engagement patterns.",
+    "images": [],
+    "tech": ["HTML", "JavaScript", "Css"],
+    "platforms": ["web"],
+    "link": "https://github.com/INOTJuannnka/AppHeatMaps",
+    "category": "Web Development"
+  },
+  {
+    "title": "keypassviewer",
+    "description": "A movile application that allows users to view and manage their passwords securely, with features like password generation and encryption.",
+    "images": [],
+    "tech": ["Flutter", "Dart", "Firebase"],
+    "platforms": ["android"],
+    "link": "https://github.com/INOTJuannnka/keypass-viewer-main",
+    "category": "Mobile Development"
   }
 ]

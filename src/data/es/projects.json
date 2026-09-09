@@ -5,7 +5,7 @@
     "images": [],
     "tech": ["React Native", "JavaScript", "REST APIs"],
     "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/INOTJuannnka/MyMobileApp-TODO",
+    "link": "https://github.com/MyBill-Proyecto2",
     "category": "Desarrollo Móvil"
   },
   {
@@ -14,7 +14,7 @@
     "images": [],
     "tech": ["React", "Node.js", "Python", "Machine Learning", "Docker"],
     "platforms": ["web"],
-    "link": "https://github.com/INOTJuannnka/Terra-Smart-TODO",
+    "link": "https://github.com/INOTJuannnka/ProyectoTerraSmart",
     "category": "IoT & Web"
   },
   {
@@ -23,7 +23,7 @@
     "images": [],
     "tech": ["Java", "Spring Boot", "PostgreSQL", "REST APIs"],
     "platforms": ["web", "api"],
-    "link": "https://github.com/INOTJuannnka/MyBill-TODO",
+    "link": "https://github.com/MyBill-Proyecto2/MyBill-Risk-matrix",
     "category": "Backend Development"
   },
   {
@@ -32,7 +32,26 @@
     "images": [],
     "tech": ["Node.js", "Docker", "Cybersecurity", "REST APIs"],
     "platforms": ["api", "linux"],
-    "link": "https://github.com/INOTJuannnka/IoT-Security-TODO",
+    "link": "https://github.com/INOTJuannnka/TerraSmartESP32",
     "category": "IoT & Cybersecurity"
+  },
+  {
+    "title": "App Heat Maps",
+    "description": "Una aplicación web que visualiza mapas de calor de interacciones de usuarios, proporcionando información sobre el comportamiento y patrones de compromiso de los usuarios.",
+    "images": [],
+    "tech": ["HTML", "JavaScript", "Css"],
+    "platforms": ["web"],
+    "link": "https://github.com/INOTJuannnka/AppHeatMaps",
+    "category": "Desarrollo Web"
+  },
+  {
+    "title": "keypassviewer",
+    "description": "Una aplicación móvil que permite a los usuarios ver y gestionar sus contraseñas de forma segura, con funciones como generación de contraseñas y cifrado.",
+    "images": [],
+    "tech": ["Flutter", "Dart", "Firebase"],
+    "platforms": ["android"],
+    "link": "https://github.com/INOTJuannnka/keypass-viewer-main",
+    "category": "Desarrollo Móvil"
   }
+  
 ]
