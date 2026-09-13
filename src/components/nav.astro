@@ -49,7 +49,7 @@ const switchLang = lang === 'es' ? 'en' : 'es';
 const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
 ---
 
-<div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-50 flex items-center gap-3 transition-transform duration-300">
+<div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-[60] flex items-center gap-3">
   <a href={switchLangUrl} class="px-2 py-1 bg-background border border-accent/20 rounded-lg text-xs font-bold text-maintext uppercase hover:bg-accent/10 hover:text-accent transition-colors">
     {switchLang}
   </a>
@@ -59,11 +59,11 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
 <div class="fixed top-2 md:top-6 left-0 right-0 z-50 flex justify-center pointer-events-none px-4">
   <nav
     id="main-nav"
-    class="pointer-events-auto bg-background/5 border border-accent/20 rounded-full px-2 py-1 shadow-lg w-full max-w-[90%] md:max-w-2xl lg:max-w-3xl flex justify-between items-center"
+    class="pointer-events-auto bg-background/5 border border-accent/20 rounded-full px-2 py-1 shadow-lg w-full max-w-[90%] md:max-w-3xl lg:max-w-3xl flex justify-between items-center"
   >
     <div class="container mx-auto flex justify-center items-center p-3 reveal-content" style="animation-delay: 700ms;">
       <ul
-        class="flex w-full justify-between md:space-x-6 md:justify-center md:gap-12 gap-1"
+        class="flex w-full justify-between md:justify-center md:gap-6 lg:gap-12 gap-1"
       >
         {
           navItems.map((item) => (
@@ -79,7 +79,7 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
                     class="nav-icon w-full h-full text-accent/50 group-hover:text-accent transition-colors duration-300" 
                   />
                 </span>
-                <span class="hidden md:inline-block">{item.label}</span>
+                <span class="hidden md:inline-block whitespace-nowrap">{item.label}</span>
                 <span class="md:hidden text-xs truncate max-w-full">{item.label}</span>
               </a>
             </li>
@@ -203,15 +203,16 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
       /* Optional: Turn off blur when hidden to save GPU cycles */
       backdrop-filter: blur(0px);
     }
+  }
 
-    /* Hiding theme-toggle while scroling on mobile */
+  /* On phones: vertical stack below the top nav pill, so the controls never cover the Contact tab */
+  @media (max-width: 767px) {
     #theme-toggle-wrapper {
-      will-change: transform;
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    /* Slide the button UP out of view */
-    #theme-toggle-wrapper.theme-hidden {
-      transform: translateY(-150%) !important;
+      top: calc(env(safe-area-inset-top, 0px) + 6rem);
+      right: 0.75rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
     }
   }
 
@@ -240,7 +241,6 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
 <script>
   //scroll morphing effect, changing width & border radius
   const nav = document.getElementById("main-nav");
-  const themeWrapper = document.getElementById("theme-toggle-wrapper");
 
   const maxScroll = 1000;
   let lastScrollY = window.scrollY;
@@ -255,7 +255,8 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
       const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
       const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
 
-      const minWidth = 620;
+      // Spanish labels (Trayectoria, Habilidades) need more room than English ones
+      const minWidth = 700;
       const maxWidth = window.innerWidth * 0.8;
       const currentWidth = maxWidth - (maxWidth - minWidth) * easeProgress;
 
@@ -269,13 +270,11 @@ const switchLangUrl = `${import.meta.env.BASE_URL}${switchLang}/`;
     if (window.innerWidth < 768) {
       // Small buffer (e.g. 10px) to prevent accidental hiding on "jittery" scrolls
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling Down - Hide Nav & theme-toggle
+        // Scrolling Down - Hide Nav
         nav?.classList.add("nav-hidden");
-        themeWrapper?.classList.add("theme-hidden");
       } else {
-        // Scrolling Up - Show Nav & theme-toggle
+        // Scrolling Up - Show Nav
         nav?.classList.remove("nav-hidden");
-        themeWrapper?.classList.remove("theme-hidden");
       }
     }
 
