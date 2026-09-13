@@ -8,6 +8,14 @@
     "skills": ["Node.js", "Docker", "REST APIs", "Ciberseguridad", "Arquitectura IoT"]
   },
   {
+    "company": "Startup de  IoT",
+    "role": "Desarrollador Backend",
+    "period": "Jul 2025 - Dic 2025",
+    "type": "Proyecto Académico / Práctica",
+    "description": "Diseño e implementación de un prototipo centrado en mejorar la seguridad en entornos IoT. Desarrollo de servicios backend con Node.js, contenerización con Docker y diseño de arquitectura de red segura.",
+    "skills": ["Node.js", "Docker", "REST APIs", "Ciberseguridad", "Arquitectura IoT"]
+  },
+  {
     "company": "Terra-Smart (PhantomSecure / SumoThings)",
     "role": "Desarrollador Full Stack & Scrum Master",
     "period": "Ene 2025 - Jun 2025",
@@ -19,7 +27,7 @@
     "company": "SENA / Clientes Independientes",
     "role": "Técnico en Redes & Infraestructura",
     "period": "Proyectos Independientes",
-    "type": "Freelance",
+    "type": "Estudiante",
     "description": "Instalación y configuración de redes residenciales, incluyendo cableado estructurado, configuración de routers y diagnóstico de conectividad (LAN/Wi-Fi).",
     "skills": ["Redes LAN/WAN", "TCP/IP", "Routers/Switches", "Cisco CCNA"]
   },
